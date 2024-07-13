@@ -14,29 +14,17 @@ export default function App():React.JSX.Element {
   const onClickMe = ()=>{
     Alert.alert("Hello","Input your fullname");
   }
- /*  const users =[
-    {id:1001,name:'John'},
-    {id:1002,name:'Mary'}
-  ] */
+  const users =[
+    {name:'Rujee Nakkardpanou'}
+  ]
   return (
     <View style={styles.container}>
       <AppHeader title={"Input your fullname"}/>
       <AppHeader title={"Message from App.tsx"}/>
-      {/* <Text>Hello React Native</Text>
-      { users.map((data,index)=>{
-        return(
-        <Text key={data.id}>
-          No.{index+1} ID:{data.id} Name: {data.name}
-          
-        </Text>
-
-        )
-
-      })} */}
+      {}
       <Button title ="Click Me"
       onPress={onClickMe}
       color="blue"
-      // onPress={()=>{Alert.alert('Hi','React Native is Fun!!')}}
       />
       <AppFooter></AppFooter>
       <StatusBar style="auto" />
