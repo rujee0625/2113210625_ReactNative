@@ -1,35 +1,37 @@
-import { StyleSheet, Text, View } from 'react-native'
-import React from 'react'
+import { StyleSheet, Text, View } from "react-native";
+import React from "react";
 
-type AppHeaderProps ={
-    title: string;
-}
+interface AppHeaderProps {
+  title: string;
+};
 
-
-const AppHeader = ({title}: AppHeaderProps): React.JSX.Element => {
-    const isLogin = true;
-    {isLogin && <Text></Text>}
-     {
-        isLogin==true 
-        ? <Text>Rujee Nakkardpanou</Text>
-        : <Text>Not OK</Text>
-     }
+const AppHeader = ({ title }: AppHeaderProps): React.JSX.Element => {
   return (
-    <View >
-      <Text>{title}</Text>
+    <View>
+      <View style={styles.appHeader}>
+        <Text style={styles.title}>Input your fullname</Text>
+        <Text style={styles.subtitle}>{title}</Text>
+      </View>
     </View>
-  )
-}
-
+  );
+};
 
 export default AppHeader
 
 const styles = StyleSheet.create({
-    top: {
-        flex: 0.3,
-        backgroundColor: 'grey',
-        borderWidth: 5,
-        borderTopLeftRadius: 20,
-        borderTopRightRadius: 20,
-      },
-})
+  appHeader: {
+    backgroundColor: "#aec6cf",
+    padding: 20,
+    alignItems: "center",
+    justifyContent: 'center',
+  },
+  title: {
+    fontSize: 20,
+    fontWeight: 'bold',
+    color: '#fff',
+  },
+  subtitle: {
+    fontSize: 16,
+    color: '#fff',
+  },
+});

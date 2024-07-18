@@ -2,20 +2,14 @@ import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 import AppHeader from './AppHeader';
 
-const AppFooter = ():React.JSX.Element => {
-    const hello2 = <Text>Thai-Nichi Institute of Technology</Text>;
-    //const isLogin = true;
+interface AppFooterProps {
+    message: string;
+  };
+  
+  const AppFooter = ({ message }: AppFooterProps): React.JSX.Element => {
   return (
-    <View>
-     <Text style={styles.myText}>{hello2}
-     {/* {hello} Date:{new Date().toLocaleDateString()} */}
-     </Text>
-     {/* {isLogin && <Text>Welcome John</Text>}
-     {
-        isLogin==true 
-        ? <Text>Welcome Marry</Text>
-        : <Text>Not Login</Text>
-     } */}
+    <View style={styles.appFooter}>
+     <Text style={styles.text}>{message}</Text>
     </View>
   )
 }
@@ -23,7 +17,20 @@ const AppFooter = ():React.JSX.Element => {
 export default AppFooter
 
 const styles = StyleSheet.create({
-  myText:{
-      color:'Black'
+  appFooter: {
+    backgroundColor: '#f8f8f8',
+    padding: 20,
+    fontSize: 15,
+    alignItems: 'center',
+    justifyContent: 'center',
+    position: 'absolute',
+    left: 0,
+    right: 0,
+    bottom: 0,
+  },
+  text: {
+    fontSize: 16,
+    fontWeight: 'bold',
+    color: '#333',
   }
 })
