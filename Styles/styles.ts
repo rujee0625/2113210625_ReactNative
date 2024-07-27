@@ -28,5 +28,7 @@ export default StyleSheet.create({
         fontSize: 20,
         color: '#dc143c',
     },
-
+    textDetail:{
+        color: "white",
+    }
 })
