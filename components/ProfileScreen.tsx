@@ -3,15 +3,21 @@ import React, { useState } from "react";
 import styles from "../Styles/styles";
 
 const ProfileScreen = (): React.JSX.Element => {
-  const [name, setName] = useState("Rujee Nakkardpanou");
-  const [image, setImage] = useState(require("../assets/1.jpg"));
+
+  const oldName = "Rujee Nakkardpanou";
+  const oldImage = (require("../assets/1.jpg"));
+
+  const [name, setName] = useState(oldName);
+  const [image, setImage] = useState(oldImage);
+
+  const newImage = require("../assets/kawaiiminimal.jpg");
 
   const handleNameChange = () => {
-    setName("Kawaii Minimal");
+    setName((prevName) => (prevName === oldName ? "Kawaii Minimal": oldName));
   };
 
   const handleImageChange = () => {
-    setImage(require("../assets/kawaiiminimal.jpg"));
+      setImage((prevImage) => (prevImage === oldImage ? newImage : oldImage));
   };
 
   return (
@@ -23,13 +29,13 @@ const ProfileScreen = (): React.JSX.Element => {
           <Button title="CHANGE NAME" onPress={handleNameChange} color="blue" />
           <Text style={styles.textDetail}>{"/n"}</Text>
           <Text style={styles.textDetail}>{"/n"}</Text>
-            <View>
-              <Button
-                title="CHANGE IMAGE"
-                onPress={handleImageChange}
-                color="blue"
-              />
-            </View>
+          <View>
+            <Button
+              title="CHANGE IMAGE"
+              onPress={handleImageChange}
+              color="blue"
+            />
+          </View>
         </View>
       </View>
     </View>
