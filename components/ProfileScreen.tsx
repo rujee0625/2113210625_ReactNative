@@ -1,39 +1,38 @@
 import { View, Text, Image, Button } from "react-native";
 import React, { useState } from "react";
-import styles from "../Styles/styles";
+import {stylesProflie} from "../Styles/styles";
 
 const ProfileScreen = (): React.JSX.Element => {
 
   const oldName = "Rujee Nakkardpanou";
   const oldImage = (require("../assets/1.jpg"));
+  const newImage = require("../assets/kawaiiminimal.jpg");
 
   const [name, setName] = useState(oldName);
   const [image, setImage] = useState(oldImage);
 
-  const newImage = require("../assets/kawaiiminimal.jpg");
 
   const handleNameChange = () => {
-    setName((prevName) => (prevName === oldName ? "Kawaii Minimal": oldName));
+      setName (name == oldName ? "Kawaii Minimal": oldName);
   };
 
   const handleImageChange = () => {
-      setImage((prevImage) => (prevImage === oldImage ? newImage : oldImage));
+      setImage (image == oldImage ? newImage : oldImage);
   };
 
   return (
-    <View style={styles.container}>
-      <View style={styles.profileContainer}>
-        <Image source={image} style={styles.profileImage} />
+    <View style={stylesProflie.container}>
+      <View style={stylesProflie.profileContainer}>
+        <Image source={image} style={stylesProflie.profileImage} />
         <View>
-          <Text style={styles.profileName}>{name}</Text>
-          <Button title="CHANGE NAME" onPress={handleNameChange} color="blue" />
-          <Text style={styles.textDetail}>{"/n"}</Text>
-          <Text style={styles.textDetail}>{"/n"}</Text>
+          <Text style={stylesProflie.profileName}>{name}</Text>
+          <Button title="CHANGE NAME" onPress={handleNameChange} color="green" />
+          <Text style={stylesProflie.textDetail}>{"\n"}</Text>
           <View>
             <Button
               title="CHANGE IMAGE"
               onPress={handleImageChange}
-              color="blue"
+              color="red"
             />
           </View>
         </View>

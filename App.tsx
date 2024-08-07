@@ -1,13 +1,14 @@
-import { View, Text } from 'react-native'
-import React from 'react'
-import ProfileScreen from './components/ProfileScreen'
+import React from "react";
+import { StyleSheet, Text, TextInput, View, ComponentProvider, Alert} from "react-native";
+import ProfileScreen from "./components/ProfileScreen";
+import Login from "./components/Login";
 
-const App = (): React.JSX.Element => {
+export default function App(): React.JSX.Element {
+  
   return (
-    <View>
+    <View >     
       <ProfileScreen/>
+      <Login/>
     </View>
-  )
+  );
 }
-
-export default App
