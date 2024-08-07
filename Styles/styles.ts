@@ -125,7 +125,7 @@ const stylesProflie = StyleSheet.create({
         textAlign:"right",
         fontWeight: 'bold',
         fontSize: 20,
-        color: '#dc143c',
+        color: '#a98463',
     },
 
     textDetail:{

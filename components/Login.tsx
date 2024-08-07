@@ -7,12 +7,12 @@ const Login = () => {
   const [email, setEmail] = useState("");
 
   const handleButtonClick = () => {
-    Alert.alert("Hello",`Input your fullname : ${fullname}`);
-  }
+    Alert.alert("Hello", `Input your fullname : ${fullname}`);
+  };
 
   return (
     <View style={stylesLogin.container}>
-        <TextInput
+      <TextInput
         style={stylesLogin.inputLogin}
         placeholder="Enter your fullname"
         value={fullname}
@@ -25,8 +25,7 @@ const Login = () => {
         value={email}
         onChangeText={setEmail}
       />
-      <Button title="Submit" onPress={handleButtonClick} color="orange"/>
-      
+      <Button title="Submit" onPress={handleButtonClick} color="orange" />
     </View>
   );
 };
