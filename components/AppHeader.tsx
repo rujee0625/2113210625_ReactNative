@@ -9,12 +9,10 @@ interface AppHeaderProps {
 
 const AppHeader = ({ fullname, message }: AppHeaderProps): React.JSX.Element => {
   return (
-    <View >
       <View style={stylesPractice.header}>
         <Text style={stylesPractice.headerText}>Input your fullname: {fullname}</Text>
         <Text style={stylesPractice.subtitleText}>{message}</Text>
       </View>
-    </View>
   );
 };
 
