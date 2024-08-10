@@ -1,6 +1,7 @@
 import { View, Text, Image, Button } from "react-native";
 import React, { useState } from "react";
 import { stylesProflie } from "../Styles/styles";
+import Login from "./Login";
 
 const ProfileScreen = (): React.JSX.Element => {
   const oldName = "Rujee Nakkardpanou";
@@ -39,6 +40,7 @@ const ProfileScreen = (): React.JSX.Element => {
           </View>
         </View>
       </View>
+      <Login />
     </View>
   );
 };

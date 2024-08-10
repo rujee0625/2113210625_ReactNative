@@ -147,12 +147,11 @@ const stylesLogin = StyleSheet.create({
     container: { 
       justifyContent: "center", 
       padding: 20, 
-      marginTop: 20,
-      marginLeft: 20, 
+      marginTop: 50,
       backgroundColor: '#f5f4b2', // ตงคาสพนหลงเปนสขาว 
       borderRadius: 10, // เพมความมนใหกบขอบคอนเทนเนอร 
       elevation: 3, // เพมเงาใหกบคอนเทนเนอร (เฉพาะ Android) 
-      width: '90%', // ตงความกวางของ container ให้เต็มหน้าจอ 
+      width: '100%', // ตงความกวางของ container ให้เต็มหน้าจอ 
     }, 
     inputLogin: { 
       height: 45, // เพมความสงของ TextInput 
