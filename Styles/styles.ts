@@ -164,4 +164,4 @@ const stylesLogin = StyleSheet.create({
     },  
   });
 
-export { styles, stylesPractice, stylesProflie, stylesLogin };
+export { styles, stylesPractice, stylesProflie, stylesLogin};
