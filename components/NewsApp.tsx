@@ -1,11 +1,4 @@
-import {
-  View,
-  Text,
-  StyleSheet,
-  TouchableOpacity,
-  ActivityIndicator,
-  FlatList,
-} from "react-native";
+import {View,Text,StyleSheet,TouchableOpacity,ActivityIndicator,FlatList,} from "react-native";
 import React, { useState, useEffect } from "react";
 import { stylesUser } from "../Styles/styles";
 
@@ -64,4 +57,4 @@ const NewsApp = () => {
   );
 };
 
-export default NewsApp;
+export default NewsApp; 

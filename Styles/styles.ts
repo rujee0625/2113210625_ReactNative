@@ -232,4 +232,4 @@ const stylesUser = StyleSheet.create({
   },
 });
 
-export { styles, stylesPractice, stylesProflie, stylesLogin, stylesNewApp,stylesUser };
+export { styles, stylesPractice, stylesProflie, stylesLogin, stylesNewApp, stylesUser};
