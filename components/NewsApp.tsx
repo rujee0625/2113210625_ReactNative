@@ -42,7 +42,6 @@ const NewsApp = () => {
 
   return (
     <View style={stylesUser.container}>
-      <Text>TESTasdasd</Text>
       {loading ? ( //loading spinning thing
         <ActivityIndicator size="large" color="red" />
       ) : (
