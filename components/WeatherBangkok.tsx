@@ -69,15 +69,15 @@ const WeatherBangkok = (): React.JSX.Element => {
     <View style={styles.container}>
         <Text style={styles.detailValue}>{formatData(state.currentDate)}</Text>
         <Text style={styles.cityName}> {state.data.name} </Text>
-        <Text style={styles.temp}> {state.data.main.temp} C </Text>
+        <Text style={styles.temp}> {state.data.main.temp} ํC </Text>
         <Text style={styles.weatherMain}> {state.data.weather[0].main} </Text> 
         <Text style={styles.weatherDescription}> {state.data.weather[0].description} </Text> 
 
     <FlatList style={styles.details}
             data={[
-                {key:'รู้สึกเหมือน',value:`${state.data.main.feels_like} C`},
-                {key:'อุณหภูมิต่ำสุด',value:`${state.data.main.temp_min} C`},
-                {key:'อุณหภูมิสูงสุด',value:`${state.data.main.temp_max} C`},
+                {key:'รู้สึกเหมือน',value:`${state.data.main.feels_like} ํC`},
+                {key:'อุณหภูมิต่ำสุด',value:`${state.data.main.temp_min} ํC`},
+                {key:'อุณหภูมิสูงสุด',value:`${state.data.main.temp_max} ํC`},
                 {key:'ความชื้น',value:`${state.data.main.humidity} %`},
                 {key:'ความกดอากาศ',value:`${state.data.main.pressure} hPa`},
             ]}
