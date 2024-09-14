@@ -22,7 +22,7 @@ const App=(): React.JSX.Element => {
   function HomeStackScreen() {
     return(
       <HomeStack.Navigator
-        initialRouteName = 'Home'
+        initialRouteName = 'Products'
         screenOptions={{
           // headerStyle: { backgroundColor: "#ffde59"},
           // headerTintColor: "white",
