@@ -4,6 +4,7 @@ import HomeScreen from "./screens/HomeScreen";
 import AboutScreen from "./screens/AboutScreen";
 import ProductScreen from "./screens/ProductScreen";
 import MenuScreen from "./screens/MenuScreen";
+import DetailScreen from "./screens/DetailScreen";
 
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {NavigationContainer} from '@react-navigation/native';
@@ -57,10 +58,8 @@ const App=(): React.JSX.Element => {
           // headerTintColor: "white",
           headerTitleStyle:{fontWeight: 'bold'}, 
         }}>
-        < ProductStack.Screen 
-          name = 'Products' 
-          component={ProductScreen}
-        />
+        < ProductStack.Screen name = 'Products' component={ProductScreen}/>
+        < ProductStack.Screen name = 'Details' component={DetailScreen}/>
       </ ProductStack.Navigator>
     )
   }
@@ -75,6 +74,7 @@ const App=(): React.JSX.Element => {
           >
             <Drawer.Screen name="HomeStack" component={HomeStackScreen} />
             <Drawer.Screen name="ProductStack" component={ProductStackScreen} />
+      
           </Drawer.Navigator>
         </NavigationContainer>
       </HeaderButtonsProvider>
