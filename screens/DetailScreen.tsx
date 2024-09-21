@@ -29,9 +29,10 @@ const DetailScreen = (): React.JSX.Element => {
 
   const getProductbyId = async () => {
     try {
-      const response = await findProductbyId(route.params.id);
+      const response = await findProductbyId(route.params.productId);
       //console.log(response.data.data);
       setDetail(response.data.data);
+
     } catch (error) {
       console.log(error);
     }
@@ -47,7 +48,7 @@ const DetailScreen = (): React.JSX.Element => {
     <>
       <Tile
         imageSrc={{
-          uri: "https://www.google.com/imgres?q=popmart&imgurl=https%3A%2F%2Fdown-th.img.susercontent.com%2Ffile%2Fsg-11134201-7rbk0-lkmdm0140himce&imgrefurl=https%3A%2F%2Fshopee.co.th%2F%25E0%25B8%259E%25E0%25B8%25A3%25E0%25B9%2589%25E0%25B8%25AD%25E0%25B8%25A1%25E0%25B8%25AA%25E0%25B9%2588%25E0%25B8%2587-%25E0%25B8%2582%25E0%25B8%25AD%25E0%25B8%2587%25E0%25B9%2580%25E0%25B8%25A5%25E0%25B9%2588%25E0%25B8%2599%25E0%25B8%2595%25E0%25B8%25B8%25E0%25B9%258A%25E0%25B8%2581%25E0%25B8%2595%25E0%25B8%25B2-POPMART-POPMART-SKULLPANDA-Night-City-Series-Mystery-Box-24-%25E0%25B8%258A%25E0%25B8%25B1%25E0%25B9%2588%25E0%25B8%25A7%25E0%25B9%2582%25E0%25B8%25A1%25E0%25B8%2587-%25E0%25B8%25AA%25E0%25B9%258D%25E0%25B8%25B2%25E0%25B8%25AB%25E0%25B8%25A3%25E0%25B8%25B1%25E0%25B8%259A%25E0%25B9%2580%25E0%25B8%2594%25E0%25B9%2587%25E0%25B8%2581-i.1053722542.21683162262&docid=cpHFdFGX3vU5hM&tbnid=VK4rPt7mZFrELM&vet=12ahUKEwj72s6R0sGIAxXrR2cHHfKyAUAQM3oECGwQAA..i&w=800&h=800&hcb=2&ved=2ahUKEwj72s6R0sGIAxXrR2cHHfKyAUAQM3oECGwQAA",
+          uri: "https://thestandard.co/wp-content/uploads/2021/12/COVER-WEB-8-10.jpg",
           cache: "force-cache",
         }}
         title={item.ch_title}
