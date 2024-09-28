@@ -34,31 +34,22 @@ const LoginScreen = (): React.JSX.Element => {
   const onLogin = async (data: any) => {
     try {
       const response = await login(data.email, data.password);
-      //status 200 >> Success
       if (response.status === 200) {
         Toast.show({type:'success',text1:'Login Success'})
-        //ถ้ากรอกอีเมลและรหัสผ่านถูกต้องจะแสดงข้อความ login success ที่ terminal
-        console.log("login success");
+       // console.log("login success");
       }
     } catch (error: any) {
-      //handle error from Axios TypeScript
-      let err: AxiosError<any> = error; // แปลงข้อผิดพลาดเป็น AxiosError อย่างชัดเจน
-      //status 401
+      let err: AxiosError<any> = error; //แปลงความผิดพลาดให้เป็น AxiosError
       if (err.response?.status === 401) {
-        Toast.show({
-            type: "error",
-            text1: err.response.data.message,
-            });
-        console.log(err.response.data.message);
+        Toast.show({type:'error',text1:err.response.data.message})
+        //console.log(err.response.data.message);
       } else {
-        // console.log("เกิดข้อผิดพลาด ไม่สามารถติดต่อ Server ได้");
-        Toast.show({
-            type: "error",
-            text1: "เกิดข้อผิดพลาด ไม่สามารถติดต่อ Server ได้",
-            });            
+        Toast.show({type:'error',text1:'เกิดข้อผิดพลาด ไม่สามารถติดต่อ Server ได้'});
+        //console.log("เกิดข้อผิดพลาด ไม่สามารถติดต่อ Server ได้");
       }
     }
   };
+
 
   return (
     <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
